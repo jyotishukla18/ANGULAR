@@ -1,0 +1,21 @@
+<!-- <form>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="ip_sel_user.user_name" name="user_name"/>
+    </div>
+    <div class="form-group" >
+        <label>Age:</label>
+        <input type="text" class="form-control" [(ngModel)]="ip_sel_user.user_age" name="user_age"/>
+    </div>
+    <button class="btn btn-info" (click)="updateUsers()">Update</button>
+  </form> -->
+
+  <div *ngIf="ip_sel_user">
+    <hr>
+      <p>{{ip_sel_user.user_name|uppercase}} Details</p>
+      <label> Id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ip_sel_user.user_id}}</label><br>
+      <label> Name: <input type="textbox" [(ngModel)]="ip_sel_user.user_name"/></label><br>
+      <label> age: <input type="textbox" [(ngModel)]="ip_sel_user.user_age"/></label><br><br>
+      <button class="btn btn-info" (click)="goBack()">Go back</button><br><br>
+      <button class="btn btn-info" (click)=updateUser()>Update User Detail</button>
+  </div>
